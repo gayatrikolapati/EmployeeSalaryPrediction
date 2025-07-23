@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background-image: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg");
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.result-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.result-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 400px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.result-card h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.result-card p {
+  font-size: 18px;
+  color: #444;
+}
+
+.prediction {
+  color: #0c7878;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.try-again {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #0c7878;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.try-again:hover {
+  background-color: #198b8b;
+}
+
+  </style>
+</head>
+<body>
+  <div class="result-container">
+    <div class="result-card">
+      <h2>Prediction Result</h2>
+      <p><strong>Predicted Salary Range:</strong> <span class="prediction">{{ prediction }}</span></p>
+      <a href="/" class="try-again">Try Another Prediction</a>
+    </div>
+  </div>
+</body>
+</html>

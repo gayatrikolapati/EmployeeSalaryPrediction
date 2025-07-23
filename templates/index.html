@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+  <title>Salary Prediction Form</title>
+  <style>
+    .heading {
+        text-align: center;
+        background-color: #0c7878;
+        font-family: "Segoe UI";
+        color: white;
+    }
+ 
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+    appearance: none;        
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;  
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"]:focus,
+  select:focus {
+    border-color: #17a5c2;
+    outline: none; /* fixed typo: previously was outline: outline; */
+  }
+    .main-container {
+      font-family: "Segoe UI";
+      background-image: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg");
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-size: cover;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+      margin:20px;
+
+     
+    }
+    
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+      color: black;
+    }
+
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #0c7878;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #198b8b;
+    }
+    
+  </style>
+</head>
+<body>
+    <h1 class="heading">EMPLOYEE SALARY PREDICTION</h1>
+    <div class="main-container">
+    <div class="form-container">
+    <h3>Enter Your Details :</h3>
+    
+    <form action="/predict" method="post">
+    
+      <label for="age">Age:</label>
+      <input min="18" type="number" name="age" id="age" required>
+
+      <label for="gender">Gender:</label>
+      <select name="gender" id="gender" required>
+        <option value="">--Select--</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <label for="education">Education:</label>
+      <select name="education" id="education" required>
+        <option value="">--Select--</option>
+        <option value="Bachelors">Bachelors</option>
+        <option value="HS-grad">HS-grad</option>
+        <option value="11th">11th</option>
+        <option value="Masters">Masters</option>
+        <option value="Doctorate">Doctorate</option>
+        <option value="Some-college">Some-college</option>
+      </select>
+
+      <label for="occupation">Occupation:</label>
+      <select name="occupation" id="occupation" required>
+        <option value="">--Select--</option>
+        <option value="Tech-support">Tech-support</option>
+        <option value="Craft-repair">Craft-repair</option>
+        <option value="Machine-op-inspct">Machine-op-inspct</option>
+        <option value="Exec-managerial">Exec-managerial</option>
+      </select>
+
+      <label for="workclass">Workclass:</label>
+      <select name="workclass" id="workclass" required>
+        <option value="">--Select--</option>
+        <option value="Private">Private</option>
+        <option value="Self-emp-not-inc">Self-emp-not-inc</option>
+        <option value="State-gov">State-gov</option>
+        <option value="Federal-gov">Federal-gov</option>
+      </select>
+
+      <label for="marital-status">Marital Status:</label>
+      <select name="marital-status" id="marital-status" required>
+        <option value="">--Select--</option>
+        <option value="Never-married">Never-married</option>
+        <option value="Married-civ-spouse">Married-civ-spouse</option>
+        <option value="Divorced">Divorced</option>
+        <option value="Separated">Separated</option>
+      </select>
+
+      <label for="native-country">Country:</label>
+      <select name="native-country" id="native-country" required>
+        <option value="">--Select--</option>
+        <option value="United-States">United States</option>
+        <option value="India">India</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Philippines">Philippines</option>
+      </select>
+
+      <label for="hours-per-week">Hours per Week:</label>
+      <select name="hours-per-week" id="hours-per-week" required>
+        <option value="">--Select--</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+        <option value="60">60</option>
+      </select>
+      
+      <button type="submit">Predict</button>
+    
+    </form>
+  </div>
+  </div>
+</body>
+</html>
